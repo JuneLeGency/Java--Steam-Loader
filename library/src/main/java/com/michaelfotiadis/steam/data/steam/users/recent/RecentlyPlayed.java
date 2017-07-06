@@ -1,10 +1,10 @@
 package com.michaelfotiadis.steam.data.steam.users.recent;
 
+import java.util.List;
+
 import com.google.gson.annotations.SerializedName;
 import com.michaelfotiadis.steam.data.steam.SteamApiModel;
 import com.michaelfotiadis.steam.data.steam.player.library.Game;
-
-import java.util.List;
 
 /**
  * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetRecentlyPlayedGames">Wiki</a>
@@ -22,14 +22,14 @@ public class RecentlyPlayed implements SteamApiModel {
     }
 
     /**
-     * @return
+     * @return total count
      */
     public Integer getTotalCount() {
         return totalCount;
     }
 
     /**
-     * @return
+     * @return games
      */
     public List<Game> getGames() {
         return games;

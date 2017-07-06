@@ -47,7 +47,7 @@ public interface UsersApi {
      *
      * @param key          Your Steam Web API key. Without this, the server will return an HTTP 403 (forbidden) error.
      * @param steamId      The 64 bit ID of the user to retrieve a list for.
-     * @param relationship Filter by a given role: 'all' & 'friend'
+     * @param relationship Filter by a given role: 'all' &#38;'friend'
      * @param format       (optional) The file format to return output in.
      * @return list of friends or null if profile private
      * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetFriendList">Wiki</a>

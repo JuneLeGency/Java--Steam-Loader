@@ -21,7 +21,7 @@ public class Vanity implements SteamApiModel {
     }
 
     /**
-     * @return
+     * @return steamID
      */
 
     public String getSteamId() {
@@ -37,7 +37,7 @@ public class Vanity implements SteamApiModel {
     }
 
     /**
-     * @return
+     * @return message
      */
 
     public String getMessage() {

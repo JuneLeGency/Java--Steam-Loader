@@ -1,14 +1,13 @@
 package com.michaelfotiadis.steam.api.steam;
 
+import java.util.Map;
+
 import com.michaelfotiadis.steam.data.ResponseContainer;
 import com.michaelfotiadis.steam.data.steam.player.badges.Badges;
 import com.michaelfotiadis.steam.data.steam.player.level.PlayerLevel;
 import com.michaelfotiadis.steam.data.steam.player.library.Library;
 import com.michaelfotiadis.steam.data.steam.player.quests.Quests;
 import com.michaelfotiadis.steam.data.steam.users.recent.RecentlyPlayed;
-
-import java.util.Map;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -30,7 +29,7 @@ public interface PlayerApi {
      * @param includePlayedFreeGames (Optional) (bool)
      *                               Whether or not to list free-to-play games in the results. Defaults to false.
      * @param appids_filter          (Optional) (uint32)
-     *                               Restricts results to the appids passed here. This is an array and should be passed like appids_filter[0]=440&appids_filter[1]=570
+     *                               Restricts results to the appids passed here. This is an array and should be passed like appids_filter[0]=440&#38;appids_filter[1]=570;
      * @param format                 (Optional) The file format to return output in.
      * @return {@link Library} response
      * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetOwnedGames">Wiki</a>
@@ -80,7 +79,7 @@ public interface PlayerApi {
      * @param steamId64 Player ID 64
      * @param format    (Optional) The file format to return output in.
      * @return {@link Badges} for the requested player
-     * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetBadges">Wiki</a
+     * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetBadges">Wiki</a>
      */
     @GET(BASE_URL + "GetBadges/v1")
     Call<ResponseContainer<Badges>> getBadges(@Query("key") String key,
@@ -96,7 +95,7 @@ public interface PlayerApi {
      *                  An badge id.
      * @param format    (Optional) The file format to return output in.
      * @return {@link Quests} for the requested player and (optional) badge id
-     * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetCommunityBadgeProgress">Wiki</a
+     * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetCommunityBadgeProgress">Wiki</a>
      */
     @GET(BASE_URL + "GetCommunityBadgeProgress/v1")
     Call<ResponseContainer<Quests>> getCommunityBadgeProgress(@Query("key") String key,

@@ -40,7 +40,7 @@ public interface AppsApi {
      *
      * @param appId            (uint32) AppID of game
      * @param installedVersion (uint32) The installed version of the game
-     * @param format           @param format (Optional) The file format to return output in.
+     * @param format           format (Optional) The file format to return output in.
      * @return Up to date check
      * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/UpToDateCheck">Wiki</a>
      */

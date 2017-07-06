@@ -1,13 +1,13 @@
 package com.michaelfotiadis.steam.data.dota2.model.player;
 
 
+import java.util.List;
+
 import com.google.gson.annotations.SerializedName;
 import com.michaelfotiadis.steam.data.dota2.model.DotaApiModel;
 import com.michaelfotiadis.steam.data.dota2.model.hero.AbilityUpgrade;
 import com.michaelfotiadis.steam.data.dota2.model.hero.AdditionalUnits;
 import com.michaelfotiadis.steam.data.dota2.types.LeaverStatus;
-
-import java.util.List;
 
 @SuppressWarnings("ClassWithTooManyFields")
 public class PlayerDetails implements DotaApiModel {
@@ -183,7 +183,7 @@ public class PlayerDetails implements DotaApiModel {
     /**
      * @return 0 - NONE - finished match, no abandon.
      * 1 - DISCONNECTED - player DC, no abandon.
-     * 2 - DISCONNECTED_TOO_LONG - player DC > 5min, abandoned.
+     * 2 - DISCONNECTED_TOO_LONG - player DC  5min, abandoned.
      * 3 - ABANDONED - player DC, clicked leave, abandoned.
      * 4 - AFK - player AFK, abandoned.
      * 5 - NEVER_CONNECTED - player never connected, no abandon.
