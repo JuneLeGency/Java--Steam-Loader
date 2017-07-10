@@ -3,11 +3,11 @@ package com.michaelfotiadis.steam.provider.player;
 import com.michaelfotiadis.steam.api.steam.UsersApi;
 import com.michaelfotiadis.steam.data.FileFormat;
 import com.michaelfotiadis.steam.data.ResponseContainer;
+import com.michaelfotiadis.steam.data.steam.users.friends.FriendsListResponse;
 import com.michaelfotiadis.steam.data.steam.users.user.PlayerSummaries;
 import com.michaelfotiadis.steam.data.steam.users.vanity.Vanity;
 import com.michaelfotiadis.steam.provider.SteamCallback;
 import com.michaelfotiadis.steam.provider.base.ApiProvider;
-
 import retrofit2.Call;
 
 public class UsersApiProvider extends ApiProvider<UsersApi> {
@@ -49,5 +49,16 @@ public class UsersApiProvider extends ApiProvider<UsersApi> {
 
     }
 
+    public void getFriendsList(final String steamID,final String role,
+                                   final SteamCallback<FriendsListResponse> masterCallback) {
 
+        Call<FriendsListResponse> call = getApi().getFriendsList(
+            getKey(),
+            steamID,
+            role,
+            FileFormat.JSON.toString());
+
+        execAsync(call, new WrappedCallback<FriendsListResponse>(masterCallback));
+
+    }
 }
